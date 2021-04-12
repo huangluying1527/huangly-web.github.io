@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vue编译打包部署一些问题</title>
+      <link href="2021/04/12/vue%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
+      <url>2021/04/12/vue%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>编译打包一般是放置到nginx目录下，nginx的位置不定，每个环境也不一定相同，获取项目的静态文件若是绝对路径则会导致文件找不到，所以一般都要统一调整为相对路径</p></blockquote><blockquote><p>统一前缀也是为了nginx的统一</p></blockquote><h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><blockquote><p> 修改 vue.config.js文件</p></blockquote><pre><code>module.exports = &#123;    publicPath: &#39;./&#39;,&#125;</code></pre><h3 id="统一前缀"><a href="#统一前缀" class="headerlink" title="统一前缀"></a>统一前缀</h3><blockquote><p>修改 /rouer/index.js</p></blockquote><blockquote><p><strong>base: process.env.BASE_URL + ‘hly’,</strong></p></blockquote><pre><code>export default new Router(&#123;  mode: &#39;history&#39;,  base: process.env.BASE_URL + &#39;hly&#39;,  scrollBehavior: () =&gt; (&#123; y: 0 &#125;),  routes: constantRouterMap&#125;)</code></pre><h3 id="多环境打包配置"><a href="#多环境打包配置" class="headerlink" title="多环境打包配置"></a>多环境打包配置</h3><pre><code>通过不同命令行切换不同环境api等信息，例如： npm run dev 调用本地环境api           npm run test 调用测试环境api           npm run build 调用线上环境api（1）先在package.json文件中添加：&quot;test&quot;: &quot;vue-cli-service build --mode test&quot;（2）在项目目录下建立 .env文件和.env.test文件 .env文件NODE_ENV = &#39;production&#39;VUE_APP_FLAG = &#39;pro&#39;.env.test文件（outputDir：打包时的输出目录名字，若需默认输出到dist目录，则可不写该变量）NODE_ENV = &#39;production&#39;VUE_APP_FLAG = &#39;test&#39;outputDir = test在vue.config.js文件中添加：outputDir: process.env.outputDir,（3）在main.js文件中配置api变量/*第一层if判断生产环境和开发环境*/if (process.env.NODE_ENV === &#39;production&#39;) &#123;/*第二层if，根据.env文件中的VUE_APP_FLAG判断是生产环境还是测试环境*/if (process.env.VUE_APP_FLAG === &#39;pro&#39;) &#123;//production 生产环境axios.defaults.baseURL = &#39;http://api.xinggeyun.com&#39;;&#125; else &#123;//test 测试环境axios.defaults.baseURL = &#39;http://127.0.0.1:8102&#39;;&#125;&#125; else &#123;//dev 开发环境axios.defaults.baseURL = &#39;http://127.0.0.1:8102&#39;;&#125;npm run test后，即可在目录文件中看到test文件</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="2021/04/12/hello-world/"/>
       <url>2021/04/12/hello-world/</url>
