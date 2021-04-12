@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="2021/04/12/hello-world/"/>
+      <url>2021/04/12/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><pre><code>$ hexo new [layout] &lt;title&gt;新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</code></pre><pre><code class="bash">$ hexo new &quot;post title with whitespace&quot;参数    描述-p, --path    自定义新文章的路径-r, --replace    如果存在同名文章，将其替换-s, --slug    文章的 Slug，作为新文章的文件名和发布后的 URL</code></pre><p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 index.md 文件。你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p><pre><code class="bash">hexo new page --path about/me &quot;About me&quot;</code></pre><p>以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的 title 为 “About me”</p><p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p><pre><code class="bash">hexo new page --path about/me</code></pre><p>此时 Hexo 会创建 source/_posts/about/me.md，同时 me.md 的 Front Matter 中的 title 为 “page”。这是因为在上述命令中，hexo-cli 将 page 视为指定文章的标题、并采用默认的 layout。</p><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>My New Post</title>
+      <link href="2021/04/12/My-New-Post/"/>
+      <url>2021/04/12/My-New-Post/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
