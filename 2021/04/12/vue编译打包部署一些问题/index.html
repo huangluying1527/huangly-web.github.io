@@ -155,7 +155,7 @@
 <h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><blockquote>
 <p> 修改 vue.config.js文件</p>
 </blockquote>
-<pre><code>module.exports = &#123;
+<pre><code class="bash">module.exports = &#123;
     publicPath: &#39;./&#39;,
 &#125;
 </code></pre>
@@ -165,14 +165,14 @@
 <blockquote>
 <p><strong>base: process.env.BASE_URL + ‘hly’,</strong></p>
 </blockquote>
-<pre><code>export default new Router(&#123;
+<pre><code class="bash">export default new Router(&#123;
   mode: &#39;history&#39;,
   base: process.env.BASE_URL + &#39;hly&#39;,
   scrollBehavior: () =&gt; (&#123; y: 0 &#125;),
   routes: constantRouterMap
 &#125;)
 </code></pre>
-<h3 id="多环境打包配置"><a href="#多环境打包配置" class="headerlink" title="多环境打包配置"></a>多环境打包配置</h3><pre><code>通过不同命令行切换不同环境api等信息，
+<h3 id="多环境打包配置"><a href="#多环境打包配置" class="headerlink" title="多环境打包配置"></a>多环境打包配置</h3><pre><code class="bash">通过不同命令行切换不同环境api等信息，
 
 例如： npm run dev 调用本地环境api
 
